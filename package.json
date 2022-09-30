@@ -1,0 +1,51 @@
+{
+  "name": "fcit",
+  "version": "1.0.0",
+  "description": "A Help Desk for the Students of FCIT.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start"
+  },
+  "keywords": [
+    "fcit",
+    "helpdesk",
+    "help",
+    "desk",
+    "info",
+    "pucit",
+    "gpa",
+    "cgpa",
+    "calculator",
+    "marit",
+    "lists",
+    "old",
+    "campus",
+    "new"
+  ],
+  "author": "anc - bitf19m024",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@reduxjs/toolkit": "^1.8.3",
+    "gh-pages": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
