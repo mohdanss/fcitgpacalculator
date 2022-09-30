@@ -22,7 +22,9 @@ body{
   height: auto;
   padding: 0;
   margin: 0;
-  background-color: #0e1202;
+  background: linear-gradient(90deg, #11a5bf4e 0%, #5f159faf 80%), url(../images/pu.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 
 }
 
@@ -46,11 +48,7 @@ body{
   align-items: center;
 
   background: rgb(47, 9, 65);
-  background: linear-gradient(
-    129deg,
-    rgba(47, 9, 65, 1) 33%,
-    rgba(43, 4, 64, 1) 100%
-  );
+  background: linear-gradient(129deg, rgb(40, 17, 50) 33%, rgb(28, 2, 42) 100%);
 
   border-radius: 10px 0;
 }
@@ -203,7 +201,7 @@ input:focus {
 }
 
 input::placeholder {
-  color: #c0c0c0;
+  color: #8d8d8d;
 }
 
 .name {
@@ -257,10 +255,10 @@ input::placeholder {
   width: 139px;
   letter-spacing: 1px;
   color: var(--white);
-  background-color: var(--dark);
+  background-color: var(--darker);
   border: 1px solid var(--dark);
   box-shadow: 0 0 5px 0 #812435;
-  color: var(--light1);
+  color: var(--light2);
   border-radius: 7px 1px;
   cursor: pointer;
 
@@ -318,6 +316,7 @@ input::placeholder {
     min-width: 90vw;
     min-height: 70vh;
     height: auto;
+    background: transparent;
   }
 
   .gpa-sub-container h2 {
@@ -326,6 +325,8 @@ input::placeholder {
 
   .gpa-inputs {
     width: 90%;
+    border: none;
+    box-shadow: none;
   }
 
   .chi {
