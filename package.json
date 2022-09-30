@@ -4,9 +4,13 @@
   "description": "A Help Desk for the Students of FCIT.",
   "main": "index.js",
   "type": "module",
+  "homepage": "https://mohdanss.github.io/fcitgpacalculator",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "react-scripts start"
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build && cp build/index.html build/404.html"
   },
   "keywords": [
     "fcit",

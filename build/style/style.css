@@ -1,0 +1,634 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  border: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --dark: #24143c;
+  --light1: #ff4365;
+  --light2: #00d9c0;
+  --white: #fffff3;
+  --darker: #1B0B33;
+}
+
+body{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  background-color: #0e1202;
+
+}
+
+/* cgpa calculator */
+.gpa-container {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gpa-sub-container {
+  width: 40%;
+  min-width: 40vw;
+  min-height: 50vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: rgb(47, 9, 65);
+  background: linear-gradient(
+    129deg,
+    rgba(47, 9, 65, 1) 33%,
+    rgba(43, 4, 64, 1) 100%
+  );
+
+  border-radius: 10px 0;
+}
+
+.gpa-sub-container h2 {
+  font-size: 2rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  height: 10%;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  color: var(--white);
+}
+
+/* for error message */
+.gpa-sub-container > span {
+  font-size: 12px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+.gpa-inputs {
+  background: #fff;
+  background: var(--black);
+  box-shadow: 0px 0px 1px 0px var(--white);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 85%;
+  height: auto;
+  min-width: 300px;
+  min-height: 400px;
+  border-radius: 0px;
+  padding: 5px 0;
+}
+
+.gpa-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 10%;
+  min-height: 10vh;
+}
+
+.semester-no {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--light1);
+  width: 90%;
+  height: 10%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  padding: 7px 0;
+}
+
+.col-head {
+  height: 6%;
+  min-height: 10px;
+  display: flex;
+  width: 90%;
+  justify-self: flex-start;
+}
+
+.c-dis {
+  border: 1px solid #086464;
+  color: #7d8080 !important;
+  font-weight: 600;
+}
+
+.chi {
+  background-color: transparent !important;
+  border: none !important;
+  padding: 0 14px 0 0 !important;
+}
+
+.chi::placeholder {
+  color: #00d9c0;
+}
+
+.inputs {
+  display: flex;
+  max-width: 90%;
+  width: 90%;
+  min-width: 300px;
+  min-height: 300px;
+  height: auto;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+/* gpa input */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input {
+  outline: none;
+}
+
+input:focus {
+  box-shadow: 0 0 3px 0px #c9c9c9bf;
+  border: 1px solid var(--white);
+}
+
+.gpa-input {
+  min-height: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.delete-me {
+  display: flex;
+  align-items: center;
+  color: #ff2f2f;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.delete-me:hover {
+  color: #bf1818;
+}
+
+.name,
+.marks,
+.credits {
+  background-color: var(--dark);
+  border: 1px solid #812435;
+  border-radius: 5px 0;
+  color: var(--white);
+  font-weight: 500;
+  height: 20px;
+  margin: 5px 10px 5px 0;
+  padding: 5px 10px;
+}
+
+input::placeholder {
+  color: #c0c0c0;
+}
+
+.name {
+  width: 40%;
+}
+
+.marks,
+.credits {
+  width: 18%;
+}
+
+/* gpa input ends */
+
+.addNewInput {
+  height: 10%;
+  min-height: 20px;
+  margin: 10px 0;
+  color: var(--light2);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.addNewInput:hover {
+  color: #00b9a3;
+}
+
+.addNewInput span {
+  font-size: 1rem;
+  width: 100%;
+  height: 40px;
+  font-weight: 400;
+}
+
+@keyframes moveup {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(1px);
+  }
+}
+
+.gpa-btn-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.gpa-btn-container button {
+  margin: 10px;
+  padding: 9px 15px;
+  width: 139px;
+  letter-spacing: 1px;
+  color: var(--white);
+  background-color: var(--dark);
+  border: 1px solid var(--dark);
+  box-shadow: 0 0 5px 0 #812435;
+  color: var(--light1);
+  border-radius: 7px 1px;
+  cursor: pointer;
+
+  background: linear-gradient(-45deg, #24143c 50%, #00b9a3 50%) right;
+  background-size: 230%;
+  transition: 0.5s ease-out;
+}
+
+.calc-btn {
+  background-color: var(--light1);
+  transition: all 0.2s;
+}
+
+.add-sem-btn {
+  background-color: var(--light1);
+}
+
+.calc-btn:hover {
+  color: var(--dark);
+  font-weight: bold;
+  box-shadow: none;
+  background-position: left;
+}
+
+.add-sem-btn:hover {
+  box-shadow: inset 1px 1px 3px 2px #96003cb7;
+  animation: moveup 0.2s 0.2s;
+}
+
+.add-sem-btn:focus {
+  box-shadow: inset 1px 1px 3px 2px #96003cb7;
+  outline: none;
+}
+
+.calc-btn:focus {
+  box-shadow: none;
+  border: 1px solid var(--light1);
+  outline: none;
+}
+
+/* cgpa calculator */
+
+/* GPA calculator mb */
+
+@media screen and (max-width: 600px) {
+  /* cgpa calculator */
+  .gpa-container {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .gpa-sub-container {
+    width: 100%;
+    min-width: 90vw;
+    min-height: 70vh;
+    height: auto;
+  }
+
+  .gpa-sub-container h2 {
+    font-size: 1.7rem;
+  }
+
+  .gpa-inputs {
+    width: 90%;
+  }
+
+  .chi {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 14px 0 0 !important;
+  }
+
+  .chi::placeholder {
+    color: #00d9c0;
+  }
+
+  .inputs {
+    display: flex;
+    max-width: 90%;
+    width: 90%;
+    min-width: 300px;
+    min-height: 300px;
+    height: auto;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  /* gpa input */
+  .c-dis {
+    display: none;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  input {
+    outline: none;
+  }
+
+  input:focus {
+    box-shadow: 0 0 3px 0px #c9c9c9bf;
+    border: 1px solid var(--white);
+  }
+
+  .gpa-input {
+    min-height: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+ 
+  /* gpa input ends */
+}
+
+/* GPA calculator mb */
+
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--darker); */
+  /* background-color: var(--light1); */
+  /* background: linear-gradient( 80deg, #321a56 10%, #1d0147 90%); */
+  width: 100%;
+  height: 7vh;
+  min-height: 50px;
+  /* box-shadow: 0 0 5px 0 #1212126a; */
+}
+
+.left-nav, .right-nav{
+  display: flex;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+}
+
+.left-nav{
+  justify-content: end;
+}
+
+.right-nav{
+  justify-content: start;
+}
+
+.nav-link{
+  color: var(--white);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 12px;
+  text-transform: lowercase;
+  font-weight: 200;
+  letter-spacing: 1px;
+  transition: all .5s;
+}
+
+.nav-link:hover{
+  color: #00d9c0;
+}
+
+.center-nav
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  position: relative;
+  cursor: pointer;
+}
+
+.logo-container-u, .logo-container-b {
+  position: absolute;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.logo-container-b{
+  margin: -2px 0 0 -3px;
+}
+
+.logoTextP1{
+  color: var(--light1);
+}
+
+.logoTextP2{
+  color: var(--white);
+}
+
+ .logoTextP3{
+  color: var(--light2);
+}
+
+.logo-container-u .logoTextP1{
+  color: var(--light2);
+}
+
+.logo-container-u .logoTextP2{
+  color: var(--light1);
+}
+
+.logo-container-u .logoTextP3{
+  color: var(--light1);
+}
+
+
+/* navbar */
+
+/* news */
+.newsContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  background: linear-gradient( -45deg, #16003644 10%, #1d01473f 90%);
+  min-height: 4vh;
+}
+
+@keyframes sweep {
+  from {
+      transform: translateX(-100%);
+    }
+    to {
+     transform: translateX(100%);   
+    }
+}
+
+.newss{
+  padding: 1px 10px 1px 0;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 12px;
+
+  margin: 10px;
+  text-decoration: none;
+  color: var(--light1);
+  font-style: italic;
+}
+
+/* news */
+
+
+
+/* home */
+.homeContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
+  min-width: 100vw;
+  background-color: var(--darker);
+  background: linear-gradient( 45deg, #5622a4 20%, #160036 80%);
+  background: linear-gradient( 45deg, #321a56 20%, #1d0147 80%);
+  color: var(--light2);
+}
+
+.homeContent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  min-width: 80vh;
+  height: 95vh;
+}
+
+.home-left, .home-right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  min-width: 10%;
+}
+
+.hl-content h1{
+  color: var(--white);
+  font-weight: 300;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  margin: 0;
+  width: 90%;
+}
+
+.hl-content p{
+  color: var(--white);
+  font-size: 1.3rem;
+  margin: 0;
+  font-weight: 200;
+  width: 90%;
+  text-align: justify;
+}
+
+.highlight{
+  /* color: var(--light1); */
+  /* background: linear-gradient( 45deg, #00d9c0 20%, #1d0147 80%);; */
+  /* background: #00b9a3; */
+  border-bottom: 1px solid var(--light1);
+  /* font-weight: 600; */
+}
+
+.home-right{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.hr-content{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.rect-1, .rect-2, .rect-3{
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  width: 25vw;
+  height: 25vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.rect-1 span{
+  width: 100%;
+  height: 100%;
+  background-color: var(--light1);
+  border-radius: 5px;
+}
+
+.rect-2 span{
+  width: 100%;
+  height: 100%;
+  background-color: var(--light2);
+  transform: rotate(-5deg);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 #160036;
+}
+
+.rect-3 span{
+  width: 100%;
+  height: 100%;
+  background-position: center;
+}
+
+.head-img{
+  width: 100%;
+  border-radius: 5px;
+  transform: rotate(-10deg);
+  box-shadow: 0 0 10px 0 #16003672;
+}
+
+
+/* home */
