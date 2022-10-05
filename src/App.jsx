@@ -7,10 +7,12 @@ import Home from "./sections/Home";
 function app() {
   const [currSection, setCurrSection] = React.useState("home");
   return (
-    <div>
-      {/* {currSection === 'home' && <Home/>} */}
-      <GPA />
-    </div>
+    <React.StrictMode>
+      <div>
+        {/* {currSection === 'home' && <Home/>} */}
+        <GPA />
+      </div>
+    </React.StrictMode>
   );
 }
 

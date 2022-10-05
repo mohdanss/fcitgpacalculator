@@ -35,7 +35,14 @@ function GPA() {
 
   const handleMarksNCredits = (idx, subject) => {
     let newSubjects = [...subjects];
-    newSubjects[idx] = { ...subject };
+    // update the newSubjects array, where the id matches the idx
+    newSubjects.forEach((subj) => {
+      if (subj.id === idx) {
+        subj = { ...subject };
+      }
+    });
+
+
     setSubjects(newSubjects);
     calculateGPA(newSubjects);
     saveSubjects(newSubjects);

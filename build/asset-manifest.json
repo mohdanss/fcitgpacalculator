@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/fcitgpacalculator/static/js/main.fdf12553.js",
+    "main.js": "/fcitgpacalculator/static/js/main.7c482e7b.js",
     "index.html": "/fcitgpacalculator/index.html",
-    "main.fdf12553.js.map": "/fcitgpacalculator/static/js/main.fdf12553.js.map"
+    "main.7c482e7b.js.map": "/fcitgpacalculator/static/js/main.7c482e7b.js.map"
   },
   "entrypoints": [
-    "static/js/main.fdf12553.js"
+    "static/js/main.7c482e7b.js"
   ]
 }
