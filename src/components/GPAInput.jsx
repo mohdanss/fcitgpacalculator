@@ -33,7 +33,6 @@ function GPAInput(props) {
 
   return (
     <div className="gpa-input">
-      <p>{subjInfo.id}</p>
       <input
         type="text"
         name="name"
