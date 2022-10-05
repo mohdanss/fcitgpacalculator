@@ -68,6 +68,7 @@ function GPA() {
       grade: "",
     });
     setSubjects(newSubjects);
+    saveSubjects(newSubjects);
   };
 
   const handleRemoveSubject = (id) => {
@@ -75,6 +76,8 @@ function GPA() {
     newSubjects = newSubjects.filter((subject) => subject.id !== id);
 
     setSubjects(newSubjects);
+    calculateGPA(newSubjects);
+    saveSubjects(newSubjects);
   };
 
   return (
