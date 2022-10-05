@@ -1,13 +1,5 @@
-// import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
-// import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
-// import {faCircleXmark} from "@fortawesome/free-solid-svg-icons/faCircleXmark";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-// import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
-
 import { faCircleXmark, faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 
 import React, { useEffect } from "react";
 import GPAInput from "../../components/GPAInput";
@@ -37,23 +29,15 @@ function GPA() {
     let newSubjects = [...subjects];
 
     // update the newSubjects array, where the id matches the idx
-
     for (let i = 0; i < subjects.length; i++) {
       if(subjects[i].id === idx) {
         newSubjects[i] = subject;
       }
     }
-
-    console.log(abc);
-
-    console.log(newSubjects);
-    
-    
-
     
     setSubjects(newSubjects);
     calculateGPA(newSubjects);
-    // saveSubjects(newSubjects);
+    saveSubjects(newSubjects);
   };
 
   const calculateGPA = (subjects) => {
